@@ -2,27 +2,19 @@ const express = require("express");
 const workoutsModel = require("../models/workoutModel");
 const router = express.Router();
 const {
-  createWorkout,
+  createWorkout,getWorkouts,getWorkout,deleteWorkout,updateWorkout
 } = require("../controllers/workoutController")
 
 //get
-router.get("/crudWorkout", (req, res) => {
-  res.json({ message: "Hello From Srinivas" });
-});
+router.get("/crudWorkout", getWorkouts);
 
-router.get("/crudWorkout/:id", (req, res) => {
-  res.json({ get: "Single Workout" });
-});
+router.get("/crudWorkout/:id", getWorkout);
 
 router.post("/crudWorkout",createWorkout);
 
-router.delete("/crudWorkout/:id", (req, res) => {
-  res.json({ msg: "Hello from Srinivas in Delete" });
-});
+router.delete("/crudWorkout/:id",deleteWorkout);
 
-router.patch("/crudWorkout/:id", (req, res) => {
-  res.json({ msg: "Hello from Srinivas in Patch" });
-});
+router.patch("/crudWorkout/:id",updateWorkout);
 
 router.delete("/delete/:id", (req, res) => {
   res.json({ msg: "Hello from Srinivas in Patch" });

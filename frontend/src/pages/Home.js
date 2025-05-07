@@ -1,4 +1,10 @@
+import { useEffect,useState } from "react"
+
 const Home = () =>{
+
+    useEffect(() => {
+        
+    })
 
     return (
         <div className="home">

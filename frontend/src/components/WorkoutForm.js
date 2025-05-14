@@ -31,7 +31,7 @@ const WorkoutForm = () => {
             setLoad("")
             setReps("")
             setError(null)
-            console.log("New Workout Added");
+            console.log("New Workout Added to the Database")
         }
 
 

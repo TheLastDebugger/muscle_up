@@ -37,7 +37,6 @@ const WorkoutForm = () => {
 
     }
 
-
     return (
 
         <form  className="create" onSubmit={handleSubmit}>
